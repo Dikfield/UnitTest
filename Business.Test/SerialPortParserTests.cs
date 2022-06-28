@@ -20,5 +20,11 @@ namespace Business.Tests
             // Assert.AreEqual(1,result);
 
         }
+        [Test]
+        public void ParsePort_InvalidFormat_ThrowsInvalidFormatException()
+        {
+            TestDelegate action = () => SerialPortParser.ParsePort("1");
+            Assert.Throws<FormatException>(action);
+        }
     }
 }
