@@ -23,7 +23,7 @@ namespace Business.Tests
         [Test]
         public void ParsePort_InvalidFormat_ThrowsInvalidFormatException()
         {
-            TestDelegate action = () => SerialPortParser.ParsePort("1");
+            TestDelegate action = () => SerialPortParser.ParsePort ("1");
             Assert.Throws<FormatException>(action);
         }
     }
